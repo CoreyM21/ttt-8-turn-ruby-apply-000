@@ -46,7 +46,11 @@ def valid_move?(board, index)
   end
 end
 
+<<<<<<< HEAD
 def move(board, index, value = "X")
+=======
+def move(board, index, value = "X,O")
+>>>>>>> f1562ef997aa2f6f6e776277fad20d535ec2a563
   board[index] = value
   return board
 end  
@@ -56,9 +60,16 @@ def turn(board)
   user_input = gets.chomp
   index = input_to_index(user_input)
   if (valid_move?(board, index) == true)
+<<<<<<< HEAD
     move(board, index)
     display_board(board)
   else
     turn(board)
+=======
+    return move(board, index, value)
+    return display_board(board)
+  else
+    return turn(board)
+>>>>>>> f1562ef997aa2f6f6e776277fad20d535ec2a563
   end
 end
